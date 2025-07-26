@@ -70,6 +70,14 @@ Chicken: 0.194
 Battle of the Sexes: 0.071
 ```
 
+### Understanding the Output
+
+The model infers which game-theoretic regime the market is currently behaving like (e.g., Prisoner's Dilemma).
+
+- **Match Score**: Measures how closely the observed payoff rankings match classic game templates. Max score is 8 (4 rankings × 2 players).
+- **Game Type**: The best-matching game type based on payoff alignment.
+
+
 ## How To Run
 
 **Google Colab (recommended)**:
