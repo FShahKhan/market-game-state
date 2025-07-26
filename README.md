@@ -76,10 +76,6 @@ Battle of the Sexes: 0.071
 - Open the notebook in Colab or copy-paste the code into a new [Google Colab](https://colab.research.google.com/) notebook.
 - Run the cells and inspect the outputs.
 
-**Streamlit / Snowflake**:
-- Optional prototype versions available (see `snowflake_app.py`)
-- These require additional configuration and package support
-
 ## License
 
 This project is under a **Non-Commercial License**:  
