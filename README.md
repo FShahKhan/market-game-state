@@ -1,8 +1,6 @@
 # Market Game State
 
-This project applies **Inverse Game Theory** and **Quantitative Rational Expectations (QRE)** inference to financial markets to detect which *strategic game regime* the market is in—such as the **Prisoner's Dilemma**, **Chicken**, or **Battle of the Sexes**.
-
-We use price return data from major ETFs like **SPY** and **QQQ** as a proxy for the behavior of "players" in the market, and use outcome patterns to infer strategic preferences and regime types.
+This project applies inverse game theory and quantal response equilibrium (QRE) inference to financial markets to detect which strategic regime—such as the Prisoner's Dilemma, Chicken, or Battle of the Sexes—the market is currently in. It infers player payoffs directly from observed price movements (e.g., SPY and QQQ) to reverse-engineer the underlying game structure.
 
 ## What This Does
 
