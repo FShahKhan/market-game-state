@@ -73,8 +73,8 @@ Battle of the Sexes: 0.071
 ## How To Run
 
 **Google Colab (recommended)**:
-- Open the notebook in Colab or copy-paste the code into a new [Google Colab](https://colab.research.google.com/) notebook.
-- Run the cells and inspect the outputs.
+-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FShahKhan/market-game-state/blob/main/market_game_state.ipynb)
+
 
 ## License
 
