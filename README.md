@@ -1,6 +1,6 @@
 # Market Game State
 
-This project applies inverse game theory and quantal response equilibrium (QRE) inference to financial markets to detect which strategic regime—such as the Prisoner's Dilemma, Chicken, or Battle of the Sexes—the market is currently in. It infers player payoffs directly from observed price movements (e.g., SPY and QQQ) to reverse-engineer the underlying game structure.
+This project applies inverse game theory and Quantal Response Equilibrium (QRE) inference to financial markets to infer the strategic game underlying observed market behavior. The inferred game is then compared with canonical 2×2 games such as the Prisoner's Dilemma, Chicken, and Battle of the Sexes.
 
 ## What This Does
 
@@ -16,14 +16,16 @@ This project applies inverse game theory and quantal response equilibrium (QRE) 
   - Chicken
   - Battle of the Sexes
 - Outputs:
-  - Best-fitting game regime
-  - Preference rankings
-  - Probabilities for each game type using softmax scores
+  - Inferred payoff matrices for both players.
+  - Preference rankings.
+  - Closest canonical game and match score.
+  - Pure Nash equilibrium of the inferred game.
 
 ## How It Works
 
 1. **Data**:
    - Downloads daily price data using `yfinance` (e.g., SPY, QQQ)
+   - Allows the user to specify the lookback period for market analysis.
    - Computes **daily returns** as % changes
    - Classifies outcomes into one of four action pairs: `LL`, `LS`, `SL`, `SS`
 2. **Model**:
@@ -33,7 +35,7 @@ This project applies inverse game theory and quantal response equilibrium (QRE) 
 3. **Game Inference**:
    - Ranks inferred preferences
    - Matches against known game types
-   - Assigns match score and softmax-based probability
+   - Assigns match scores to canonical games and computes the pure Nash equilibrium of the inferred game.
 
 ## What Do `LL`, `LS`, `SL`, `SS` Mean?
 
@@ -73,7 +75,7 @@ Battle of the Sexes: 0.071
 The model infers which game-theoretic regime the market is currently behaving like (e.g., Prisoner's Dilemma).
 
 - **Match Score**: Measures how closely the observed payoff rankings match classic game templates. Max score is 8 (4 rankings × 2 players).
-- **Game Type**: The best-matching game type based on payoff alignment.
+- **Closest Canonical Game**: The canonical game whose preference ordering most closely matches the inferred game.
 
 
 ## How To Run
